@@ -178,7 +178,10 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey
+    android.hardware.drm@1.4-service.clearkey \
+    android.hardware.drm@1.4.vendor \
+    libclearkeycasplugin \
+    libdrmclearkeyplugin
 
 PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl
@@ -404,6 +407,10 @@ PRODUCT_COPY_FILES += \
 # Network
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
+    
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
